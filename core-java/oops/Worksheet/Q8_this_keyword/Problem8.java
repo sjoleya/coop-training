@@ -46,18 +46,18 @@ class BankAccount {
 
 public class Problem8 {
     public static void main(String[] args) {
-        BankAccount account1 = new BankAccount("Sarthak", 1000.50, "Savings");
-        account1.displayDetails();
+        BankAccount account = new BankAccount("Sarthak", 1000.50, "Savings");
+        account.displayDetails();
         System.out.println();
 
-        account1.updateBalance(1500.75);
+        account.updateBalance(1500.75);
         System.out.println("Balance after update:");
-        account1.displayDetails();
+        account.displayDetails();
         System.out.println();
 
         // Attempting to update with an invalid balance
-        account1.updateBalance(-200);
+        account.updateBalance(-200);
         System.out.println("Balance after attempting invalid update:");
-        account1.displayDetails();
+        account.displayDetails();
     }
 }

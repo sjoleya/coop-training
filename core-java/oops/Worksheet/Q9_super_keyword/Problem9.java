@@ -25,9 +25,9 @@ class Cat extends Animal {
 
 public class Problem9 {
     public static void main(String[] args) {
-        Animal dog1 = new Dog();
-        Animal cat1 = new Cat();
-        dog1.makeSound("Bark!");
-        cat1.makeSound("Meow!");
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        dog.makeSound("Bark!");
+        cat.makeSound("Meow!");
     }
 }

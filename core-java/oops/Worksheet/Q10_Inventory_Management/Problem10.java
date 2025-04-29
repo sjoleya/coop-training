@@ -68,8 +68,8 @@ class Store {
         return _products.get(index);
     }
     public boolean searchProductByName(String name) {
-        for(Product p : _products) {
-            if(p.name.equalsIgnoreCase(name)) {
+        for(Product product : _products) {
+            if(product.name.equalsIgnoreCase(name)) {
                 return true;
             }
         }

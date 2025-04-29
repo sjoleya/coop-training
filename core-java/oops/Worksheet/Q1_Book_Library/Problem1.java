@@ -38,8 +38,8 @@ class Library {
         _books.add(book);
     }
     public boolean findBookByTitle(String title) {
-        for(Book b : _books) {
-            if(b.title.equalsIgnoreCase(title)) {
+        for(Book book : _books) {
+            if(book.title.equalsIgnoreCase(title)) {
                 return true;
             }
         }
