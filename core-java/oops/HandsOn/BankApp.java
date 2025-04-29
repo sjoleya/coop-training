@@ -1,10 +1,11 @@
 package HandsOn;
 
-import HandsOn.Models.BankAccount;
-import HandsOn.Models.CurrentAccount;
-import HandsOn.Models.SavingsAccount;
-import HandsOn.Services.StandardDeposit;
-import HandsOn.Services.StandardWithdraw;
+import HandsOn.model.BankAccount;
+import HandsOn.model.CurrentAccount;
+import HandsOn.model.SavingsAccount;
+import HandsOn.service.StandardDeposit;
+import HandsOn.service.StandardWithdraw;
+
 import java.util.Scanner;
 
 public class BankApp {
@@ -59,10 +60,10 @@ public class BankApp {
                 case 3:
                     System.out.println("Account Balance is: ₹" + account.getBalance());
                     break;
-                    case 4:
+                case 4:
                     System.out.println("Account Type is: " + account.getAccountType());
                     break;
-                    case 5:
+                case 5:
                     System.out.println("Thank you for using the Bank CLI!");
                     sc.close();
                     return;

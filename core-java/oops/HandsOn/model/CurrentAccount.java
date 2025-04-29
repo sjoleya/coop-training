@@ -1,4 +1,4 @@
-package HandsOn.Models;
+package HandsOn.model;
 
 public class CurrentAccount extends BankAccount {
     @Override

@@ -1,6 +1,6 @@
-package HandsOn.Services;
+package HandsOn.service;
 
-import HandsOn.Models.BankAccount;
+import HandsOn.model.BankAccount;
 
 public class StandardDeposit {
     public static void deposit(BankAccount bankAccount, double amount) {

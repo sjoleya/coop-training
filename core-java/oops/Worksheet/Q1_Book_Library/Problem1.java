@@ -24,21 +24,21 @@ class Book {
 }
 
 class Library {
-    private final ArrayList<Book> _books = new ArrayList<>();
+    private final ArrayList<Book> books = new ArrayList<>();
 
     public Library() {
         // Adding a dummy list of books
-        _books.add(new Book("To Kill a Mockingbird", "Harper Lee", "978-0061120084"));
-        _books.add(new Book("1984", "George Orwell", "978-0451524935"));
-        _books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565"));
-        _books.add(new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "978-0061120084"));
-        _books.add(new Book("Brave New World", "Aldous Huxley", "978-0060850524"));
+        books.add(new Book("To Kill a Mockingbird", "Harper Lee", "978-0061120084"));
+        books.add(new Book("1984", "George Orwell", "978-0451524935"));
+        books.add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565"));
+        books.add(new Book("One Hundred Years of Solitude", "Gabriel Garcia Marquez", "978-0061120084"));
+        books.add(new Book("Brave New World", "Aldous Huxley", "978-0060850524"));
     }
     public void addBook(Book book) {
-        _books.add(book);
+        books.add(book);
     }
     public boolean findBookByTitle(String title) {
-        for(Book book : _books) {
+        for(Book book : books) {
             if(book.title.equalsIgnoreCase(title)) {
                 return true;
             }

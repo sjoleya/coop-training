@@ -32,43 +32,42 @@ class Product {
 }
 
 class Store {
-    private final ArrayList<Product> _products = new ArrayList<>();
+    private final ArrayList<Product> products = new ArrayList<>();
     public Store() {
         // Adding a dummy list of products
-        _products.add(new Product(1, "Laptop", 1199.99));
-        _products.add(new Product(2, "Smartphone", 899.99));
-        _products.add(new Product(3, "Tablet", 349.99));
-        _products.add(new Product(4, "HeadPhones", 129.99));
-
+        products.add(new Product(1, "Laptop", 1199.99));
+        products.add(new Product(2, "Smartphone", 899.99));
+        products.add(new Product(3, "Tablet", 349.99));
+        products.add(new Product(4, "HeadPhones", 129.99));
     }
     public void displayAllProducts() {
-        if (_products.isEmpty()) {
+        if (products.isEmpty()) {
             System.out.println("The store has no products.");
             return;
         }
         System.out.println("--- All Products ---");
-        for (Product product : _products) {
+        for (Product product : products) {
             System.out.println(product);
         }
         System.out.println("--------------------");
     }
     public Product getProductWithHighestPrice() {
-        if(_products.isEmpty()) {
+        if(products.isEmpty()) {
             return null;
         }
         int index = 0;
-        double maxPriceSoFar = _products.get(0).getPrice();
-        for(int i = 0; i < _products.size(); i++) {
-            double currPrice = _products.get(i).getPrice();
+        double maxPriceSoFar = products.get(0).getPrice();
+        for(int i = 0; i < products.size(); i++) {
+            double currPrice = products.get(i).getPrice();
             if(currPrice > maxPriceSoFar) {
                 index = i;
                 maxPriceSoFar = currPrice;
             }
         }
-        return _products.get(index);
+        return products.get(index);
     }
     public boolean searchProductByName(String name) {
-        for(Product product : _products) {
+        for(Product product : products) {
             if(product.name.equalsIgnoreCase(name)) {
                 return true;
             }

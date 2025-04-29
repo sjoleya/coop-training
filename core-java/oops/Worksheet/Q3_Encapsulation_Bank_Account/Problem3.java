@@ -6,7 +6,6 @@ Use getters and setters with validation: prevent setting a negative balance.
  */
 
 class BankAccount {
-    // Private fields
     private String accountHolder;
     private double balance;
     private final String accountNumber;

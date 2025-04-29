@@ -1,4 +1,4 @@
-package HandsOn.Models;
+package HandsOn.model;
 
 public abstract class BankAccount {
     public String accountNumber;
