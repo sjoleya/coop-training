@@ -1,4 +1,4 @@
-package HandsOn.service.interfaces;
+package HandsOn.service;
 
 import java.util.List;
 
@@ -9,11 +9,11 @@ public interface RegistrationService {
 
     String dropStudentFromCourse(String studentId, String courseId);
 
-    List<Student> listStudentsInCourse(String courseId);
+    List<Student> getStudentsInCourse(String courseId);
 
-    List<Student> listWaitlistedStudents(String courseId);
+    List<Student> getWaitlistedStudents(String courseId);
 
-    List<Student> listStudentsByBranchInAllCourses(String branch);
+    List<Student> getStudentsByBranchInAllCourses(String branch);
 
     int getEnrollmentCount(String courseId);
 

@@ -1,4 +1,4 @@
-package HandsOn.service.interfaces;
+package HandsOn.service;
 
 import java.util.List;
 import java.util.Map;

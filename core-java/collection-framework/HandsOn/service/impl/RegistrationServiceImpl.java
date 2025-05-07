@@ -7,9 +7,9 @@ import HandsOn.exceptions.DuplicateEntryException;
 import HandsOn.exceptions.StudentNotFoundException;
 import HandsOn.model.Course;
 import HandsOn.model.Student;
-import HandsOn.service.interfaces.CourseService;
-import HandsOn.service.interfaces.RegistrationService;
-import HandsOn.service.interfaces.StudentService;
+import HandsOn.service.CourseService;
+import HandsOn.service.RegistrationService;
+import HandsOn.service.StudentService;
 
 public class RegistrationServiceImpl implements RegistrationService {
 
@@ -31,7 +31,7 @@ public class RegistrationServiceImpl implements RegistrationService {
         if (course.getWaitlist().contains(student)) {
             throw new DuplicateEntryException("Student already waitlisted!");
         }
-        if (course.getEnrolledStudents().size() <= course.getCapacity()) {
+        if (course.getEnrolledStudents().size() < course.getCapacity()) {
             course.getEnrolledStudents().add(student);
             return "Student successfully added to course";
         }
@@ -55,7 +55,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     }
 
     @Override
-    public List<Student> listStudentsInCourse(String courseId) {
+    public List<Student> getStudentsInCourse(String courseId) {
         Course course = courseService.getById(courseId);
         if (course == null) {
             throw new CourseNotFoundException("Course not found! Please enter a valid course id");
@@ -64,13 +64,13 @@ public class RegistrationServiceImpl implements RegistrationService {
     }
 
     @Override
-    public List<Student> listWaitlistedStudents(String courseId) {
+    public List<Student> getWaitlistedStudents(String courseId) {
         Course course = courseService.getById(courseId);
         return new ArrayList<>(course.getWaitlist());
     }
 
     @Override
-    public List<Student> listStudentsByBranchInAllCourses(String branch) {
+    public List<Student> getStudentsByBranchInAllCourses(String branch) {
         List<Course> courses = courseService.getAll();
         Set<Student> studentSet = new HashSet<>();
         for (Course course : courses) {

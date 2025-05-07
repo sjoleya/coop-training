@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 import HandsOn.exceptions.StudentNotFoundException;
 import HandsOn.model.Student;
 import HandsOn.repo.StudentRepository;
-import HandsOn.service.interfaces.StudentService;
+import HandsOn.service.StudentService;
 
 public class StudentServiceImpl implements StudentService {
 

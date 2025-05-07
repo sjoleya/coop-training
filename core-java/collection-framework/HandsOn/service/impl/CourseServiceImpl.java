@@ -5,7 +5,7 @@ import java.util.List;
 import HandsOn.exceptions.CourseNotFoundException;
 import HandsOn.model.Course;
 import HandsOn.repo.CourseRepository;
-import HandsOn.service.interfaces.CourseService;
+import HandsOn.service.CourseService;
 
 public class CourseServiceImpl implements CourseService {
 
