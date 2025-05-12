@@ -1,0 +1,46 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+
+### Maven ###
+target/
+.mvn/
+!/.mvn/wrapper/maven-wrapper.jar
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+### IntelliJ IDEA ###
+.idea/
+*.iml
+*.iws
+out/
+# IntelliJ HTTP Client requests
+*.http
+*.env
+
+### OS-specific ###
+.DS_Store
+Thumbs.db
+
+### Logs and temp files ###
+*.log
+logs/
+*.tmp
+*.bak
+*.swp
+
+### Spring Boot specific ###
+/*.env
+/.env
+.env.local
+application-*.yml
+application-*.properties
+!application.properties
+!application.yml
