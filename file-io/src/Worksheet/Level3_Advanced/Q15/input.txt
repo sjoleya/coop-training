@@ -1,0 +1,4 @@
+Hello, World!
+This is a test.
+Counting characters in a file: spaces, letters, and punctuation.
+New lines are also included!
