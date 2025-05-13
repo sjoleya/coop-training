@@ -1,0 +1,1 @@
+Git is a popular version control tool that remembers all the changes made to a set of files over time. This is especially useful for software development, where multiple people might be working on the same code.

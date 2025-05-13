@@ -1,0 +1,12 @@
+// File: src/config/FilePathConfig.java
+package config;
+
+import java.io.File;
+
+public class FilePathConfig {
+    // Automatically get project root path
+    public static final String PROJECT_ROOT = System.getProperty("user.dir");
+
+    // Build a file path under a known folder (e.g. shared data folder)
+    public static final String NOTES_FILE_PATH = PROJECT_ROOT + File.separator + "files" + File.separator + "notes.txt";
+}
